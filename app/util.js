@@ -1,5 +1,5 @@
 module.exports.requireEnv = function(key) {
-    if (!process.env[key])
+    if (!process.env.hasOwnProperty(key))
         throw new Error(`Missing ${key} in environment variables!`);
 
     return process.env[key];
