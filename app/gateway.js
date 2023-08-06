@@ -55,7 +55,7 @@ GatewayMediator.prototype.preprocessCSRequest = function(serviceName, request, r
 }
 
 function validate(obj, key) {
-    if (!obj[key]) throw new Error(`Missing ${key} in object!`);
+    if (!obj.hasOwnProperty(key) throw new Error(`Missing ${key} in object!`);
 }
 
 module.exports = GatewayMediator;
